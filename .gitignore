@@ -1,2 +1,3 @@
 .DS_Store
 data/statsbomb360_wc22_all_events.csv
+data/statsbomb360_wc22_train_val.csv
