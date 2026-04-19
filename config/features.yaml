@@ -1,0 +1,27 @@
+possession_key:
+  - match_id
+  - possession
+  - possession_team
+
+target_column: shot_label
+
+benchmark_views:
+  start_only:
+    description: Features available from the opening state of the possession.
+  early_first3:
+    description: Features available within the first three possession events.
+  full_descriptive:
+    description: Rich descriptive features over the full possession without leakage.
+
+feature_families:
+  - start_state
+  - early_sequence
+  - pressure
+  - progression
+  - spatial_360
+
+leakage_blocklist:
+  - shot_*
+  - pass_shot_assist
+  - pass_goal_assist
+  - shot_derived_fields
