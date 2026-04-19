@@ -1,0 +1,23 @@
+validation:
+  scheme: group_kfold
+  group_column: match_id
+  n_splits: 5
+  random_state: 7
+
+benchmarks:
+  views:
+    - start_only
+    - early_first3
+    - full_descriptive
+  models:
+    - logreg
+    - xgb
+
+metrics:
+  - roc_auc
+  - brier_score_loss
+  - log_loss
+
+calibration:
+  enabled: true
+  method: isotonic

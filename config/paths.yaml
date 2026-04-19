@@ -1,0 +1,28 @@
+project_root: .
+
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+
+raw_files:
+  events_csv: data/raw/statsbomb_wc2022_events.csv
+  frames_360_csv: data/raw/statsbomb_wc2022_360.csv
+
+intermediate_files:
+  cleaned_events: data/interim/cleaned_events.parquet
+  possessions_base: data/interim/possessions_base.parquet
+
+processed_files:
+  start_features: data/processed/features_start.parquet
+  early_features: data/processed/features_early_first3.parquet
+  full_features: data/processed/features_full.parquet
+  pressure_features: data/processed/features_pressure.parquet
+  progression_features: data/processed/features_progression.parquet
+  features_360: data/processed/features_360.parquet
+
+outputs:
+  tables_dir: outputs/tables
+  figures_dir: outputs/figures
+  logs_dir: outputs/logs
+  slides_dir: slides
